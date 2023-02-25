@@ -1,0 +1,12 @@
+table {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo {
+    background-color: rgba(102, 102, 255, 0.918);
+}
+
+.subtitulos {
+    background-color: rgba(141, 181, 255, 0.692);
+}
