@@ -1,0 +1,19 @@
+h2 {
+    border: 2px solid red;
+}
+
+/* Utilizando classes */
+
+.tituloPersonalizado {
+    border: 4px solid blue;
+    background-color: white;
+    border-radius: 20px;
+}
+
+/* Utilizando Ids */
+
+#paragrafoPersonalizado {
+    color: chartreuse;
+    background-color: rgb(216, 140, 0);
+    font-size: 40px;
+}
