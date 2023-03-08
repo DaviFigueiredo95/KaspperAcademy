@@ -1,0 +1,15 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+.caixa {
+    width: 300px;
+    box-sizing: border-box;
+    margin: 55px 15px 15px 35px;
+    padding: 10px 20px 75px 30px;
+    border: 10px solid black;
+    background-color: skyblue;
+    font-size: 50px;
+}
