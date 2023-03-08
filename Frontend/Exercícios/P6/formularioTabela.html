@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário em Tabela</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <table border="1" class="tabela_raiz">
+        <form>
+            <tr><th id="linha_titulo" class="linha" colspan="2">Dados dos Candidatos</th></tr>
+            <tr>
+                <th class="linha"><label for="candidato">Nome do Candidato:</label></th>
+                <td class="info"><input type="text" id="candidato" name="candidato" placeholder="Informe seu nome aqui" required></td>
+            </tr>
+            <tr>
+                <th class="linha"><label for="sexo">Sexo:</label></th>
+                <td class="info">
+                 <input type="radio" name="sexo" id="sexo" value="masculino">Masculino 
+                    <input type="radio" name="sexo" id="sexo" value="feminino">Feminino
+                </td>
+            </tr>
+            <tr>
+                <th class="linha"><label for="renda">Renda:</label></th>
+                <td class="info"><input type="text" name="renda" id="renda" placeholder="0,00" required pattern="^[0-9]{0,3}+\.[0-9]{3}+\,[0-9]{2}$"></td>
+            </tr>
+            <tr>
+                <th class="linha"><label for="time">Time:</label></th>
+                <td class="info"><input type="text" name="time" id="time" placeholder="Ex.: Corinthians"></td>
+            </tr>
+            <tr>
+                <th class="linha"><label for="cartao">Cartão de Crédito:</label></th>
+                <td class="info"><input type="text" name="cartao" id="cartao" placeholder="'0000 0000 0000 0000'" required pattern="^([0-9]{4})[ ]([0-9]{4})[ ]([0-9]{4})[ ]([0-9]{4})$"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="linha_botao">
+                    <input type="submit" value="Enviar" class="botao1">
+                    <input type="reset" value="Limpar" class="botao2">
+                </td>
+            </tr>
+            
+        </form>
+    </table>
+    
+</body>
+</html>

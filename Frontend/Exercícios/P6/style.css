@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: rgba(0, 89, 255, 0.486);
+}
+
+.tabela_raiz {
+    border-style: none;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.linha {
+    background-color: rgb(255, 255, 171);
+    border: 2px solid black;
+    padding: 5px;
+}
+
+#linha_titulo {
+    background-color: yellow;
+}
+
+.info {
+    border: 2px solid black;
+    padding: 5px;
+    background-color: white;
+}
+
+.botao1 {
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding: 8px;
+    background-color: rgba(108, 245, 108, 0.589);
+    box-shadow: 1px 1px 5px 1px;
+}
+
+.botao2 {
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 8px;
+    background-color: rgba(245, 71, 71, 0.473);
+    box-shadow: 1px 1px 5px 1px;
+}
+
+.linha_botao {
+    border-style: none;
+}
