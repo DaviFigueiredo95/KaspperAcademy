@@ -14,18 +14,19 @@ if (numero1 < numero2) {
 
 const aluno = {
     nome: prompt("Informe seu nome: "),
-    nota1: parseInt(prompt("Digite a primeira nota: ")),
-    nota2: parseInt(prompt("Digite a segunda nota: "))
+    nota1: parseFloat(prompt("Digite a primeira nota: ")),
+    nota2: parseFloat(prompt("Digite a segunda nota: "))
 }
 
-let media = aluno.nota1 + aluno.nota2 / 2;
+let media = (aluno.nota1 + aluno.nota2) / 2;
+console.log(`A média do ${aluno.nome} é: ${media}`);
 
 if (media == 10) {
-    console.log (`O aluno, ${aluno.nome} foi Aprovado com estrelinha`);
-} else if (media >= 7) {
-    console.log (`Sua nota foi: ${media}, está aprovado.`);
+    console.log (`Aprovado com estrelinha!`);
+} else if (media >= 7 && media < 10) {
+    console.log (`Aprovado.`);
 } else {
-    console.log (`Sua nota foi: ${media}, está reprovado`);
+    console.log (`Reprovado! Estude mais.`);
 }
 
 console.log(aluno);
