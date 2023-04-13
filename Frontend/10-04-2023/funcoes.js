@@ -5,7 +5,7 @@ function ola() {
 // Chamando a função
 ola();
 
-// 2ª expressão
+// 2ª expressão Expression
 const olaExpressao = function () {
   console.log("Olá expressão!");
 };
