@@ -11,7 +11,7 @@ body {
     background: linear-gradient(120deg, #58efec, #e85c90, #fcc9ba);
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
 
 .relogio {
