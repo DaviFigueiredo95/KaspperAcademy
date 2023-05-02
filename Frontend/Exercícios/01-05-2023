@@ -1,0 +1,15 @@
+let a = 5;
+let b = 3;
+let c = 3;
+
+if (a < b + c && b < a + c && c < a + b ) {
+    if (a==b && b==c) {
+        console.log('Triangulo Equilátero');
+    } else if (a==b || b==c || a==c) {
+        console.log('Triangulo Isósceles');
+    } else {
+        console.log('Triangulo Escaleno');
+    }
+} else {
+    console.log('Não é possível formar um triangulo');
+}
