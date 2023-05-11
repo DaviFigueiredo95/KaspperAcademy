@@ -21,12 +21,24 @@ primary key (sku)
 ); */
 
 # Criando a tabela vendas e itens_venda
- create table venda (
+/* create table venda (
  id int,
  data_compra date,
  valor_total decimal(6, 2),
  rg int,
  primary key (id),
- foreign key (rg) references
+ foreign key (rg) references clientes (rg)
+ ); */
+ 
+ create table itens_venda (
+ id_item int,
+ sku int,
+ id_venda int,
+ quantidade int,
+ subtotal decimal (6, 2),
+ primary key (id_item),
+ foreign key (sku) references produtos (sku),
+ foreign key (id_venda) references venda (id)
  );
 
+insert into
