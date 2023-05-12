@@ -57,4 +57,4 @@ where sku = 1; */
 # delete from produtos where sku = 2;
 
 # Usando o operador like
-select nome from produtos where nome
+select nome from produtos where nome like 'V%';
