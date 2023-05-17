@@ -28,13 +28,13 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                        <li class="nav-item"><a class="nav-link me-lg-3" href="#features">Features</a></li>
-                        <li class="nav-item"><a class="nav-link me-lg-3" href="#download">Download</a></li>
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="#cadastro">Cadastre-se</a></li>
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="#login">Login</a></li>
                     </ul>
                     <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                         <span class="d-flex align-items-center">
                             <i class="bi-chat-text-fill me-2"></i>
-                            <span class="small">Send Feedback</span>
+                            <span class="small">Feedback</span>
                         </span>
                     </button>
                 </div>
@@ -55,6 +55,22 @@
                             <div class="form-group">
                                 <label for="data_nascimento">Data de Nascimento</label>
                                 <input type="date" class="form-control" id="data_nascimento" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="rg">RG</label>
+                                <input type="text" class="form-control" id="rg" placeholder="00.000.000-00">
+                            </div>
+                            <div class="form-group">
+                                <label for="cpf">CPF</label>
+                                <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00">
+                            </div>
+                            <div class="form-group">
+                                <label for="cnh">Carteira de Habilitação</label>
+                                <input type="text" class="form-control" id="cnh" placeholder="000000000">
+                            </div>
+                            <div class="form-group" method="post">
+                                <label for="antecedentes_criminais">Antecedentes Criminais</label>
+                                <input type="file" class="form-control" id="antecedentes_criminais">
                             </div>
                             <button onclick="salvarMotorista" type="submit" class="btn btn-primary">Enviar</button>
                         </div>
@@ -141,12 +157,6 @@
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
