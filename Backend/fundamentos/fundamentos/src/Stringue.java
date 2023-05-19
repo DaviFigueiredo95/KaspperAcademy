@@ -11,5 +11,11 @@ public class Stringue {
         int y = 3;
         String z = x + y;
         System.out.println("Qual o valor de z: " + z);
+
+
+        String str1 = "Hello";
+        String str2 = "World";
+        String str3 = "Hello";
+
     }
 }
