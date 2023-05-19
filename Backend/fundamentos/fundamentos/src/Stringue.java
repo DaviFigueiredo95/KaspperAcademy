@@ -17,5 +17,28 @@ public class Stringue {
         String str2 = "World";
         String str3 = "Hello";
 
+        boolean saoIguais = str1.equals(str3);
+        System.out.println("str1 é igual ao str3? " + saoIguais);
+
+        saoIguais = str1.equalsIgnoreCase(str3);
+        System.out.println("e agora str1 é igual ao str3? " + saoIguais);
+
+        boolean saoIguaisOperador = str1 == str3;
+        System.out.println("str1 é igual a str2? " + saoIguaisOperador);
+
+        String texto = "O rato roeu a roupa do rei de Roma";
+        int posicao = texto.indexOf("roupa");
+        System.out.println(posicao);
+
+        String textoSubstituido = texto.replace("rato", "gato");
+        System.out.println(textoSubstituido);
+
+        
+
+
+
+
+
+
     }
 }
