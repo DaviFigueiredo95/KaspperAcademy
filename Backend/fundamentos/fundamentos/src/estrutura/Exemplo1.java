@@ -8,5 +8,12 @@ public class Exemplo1 {
             System.out.println("Contador: " + contador);
             contador++;
         }
+
+        int contador2 = 0;
+
+        do{
+            System.out.println("Contador2: " + contador2);
+            contador2++;
+        } while (contador2 < 5);
     }
 }
