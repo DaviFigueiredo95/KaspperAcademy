@@ -59,7 +59,7 @@ Junte-se a nós agora mesmo e descubra como nossa comunidade de caronas pode sim
 </p>  
                     </div>
                     <div class="col-lg-6 mt-4">
-                        <h2>Cadastro Motorista</h2> <!--ATENÇÃO AQUIIIII-->
+                        <h2 id="cadastro">Cadastro Motorista</h2> <!--ATENÇÃO AQUIIIII-->
                         <div class="mb-5 mb-lg-0 text-center text-lg-start">
                             <div class="form-group my-3">
                                 <label for="nome">Nome</label>
@@ -103,15 +103,61 @@ Junte-se a nós agora mesmo e descubra como nossa comunidade de caronas pode sim
                             <div class="form-group my-3">
                                 <label for="placa">Placa</label>
                                 <input type="text" class="form-control" id="placa" placeholder="ABC-1234">
+                            </div> 
+                            <br><br>
+                            <h2>Residência</h2> <!--ATENÇÃO AQUIIIII-->
+                        <div class="mb-5 mb-lg-0 text-center text-lg-start">
+                            <div class="form-group my-3">
+                                <label for="rua">Rua</label>
+                                <input type="text" class="form-control" id="rua"  placeholder="Informe aqui">
                             </div>
                             <div class="form-group my-3">
-                                <label for="cnh">Carteira de Habilitação</label>
-                                <input type="text" class="form-control" id="cnh" placeholder="000000000">
+                                <label for="numero">Número</label>
+                                <input type="number" class="form-control" id="numero" placeholder="00">
                             </div>
-                            <div class="form-group my-3" method="post">
-                                <label for="antecedentes_criminais">Antecedentes Criminais</label>
-                                <input type="file" class="form-control" id="antecedentes_criminais">
+                            <div class="form-group my-3">
+                                <label for="bairro">Bairro</label>
+                                <input type="text" class="form-control" id="bairro" placeholder="Informe aqui">
                             </div>
+                            <div class="form-group my-3">
+                                <label for="cidade">Cidade</label>
+                                <input type="text" class="form-control" id="cidade" placeholder="Informe aqui">
+                            </div>
+                            <div class="form-group my-3">
+                                <label for="cep">CEP</label>
+                                <input type="text" class="form-control" id="cep" placeholder="00000-000">
+                            </div> 
+                            <br><br>  
+                            <h2>Filhos</h2> <!--ATENÇÃO AQUIIIII-->
+                        <div class="mb-5 mb-lg-0 text-center text-lg-start">
+                            <div class="form-group my-3">
+                                <label for="nome2">Nome</label>
+                                <input type="text" class="form-control" id="Nome"  placeholder="Informe aqui">
+                            </div>
+                            <div class="form-group my-3">
+                                <label for="data_nascimento2">Data de nascimento</label>
+                                <input type="date" class="form-control" id="data_nascimento2" placeholder="00">
+                            </div>
+                            <div class="form-group my-3">
+                                <label for="idade">Idade</label>
+                                <input type="number" class="form-control" id="idade" placeholder="00">
+                            </div>  
+                            <br><br>
+                            <h2>Escola</h2> <!--ATENÇÃO AQUIIIII-->
+                        <div class="mb-5 mb-lg-0 text-center text-lg-start">
+                            <div class="form-group my-3">
+                                <label for="escola">Nome da escola</label>
+                                <input type="text" class="form-control" id="Nome"  placeholder="Informe aqui">
+                            </div>
+                            <div class="form-group my-3">
+                                <label for="secretaria">Contato da Secretaria</label>
+                                <input type="tel" class="form-control" id="secretaria" placeholder="(00) 00000-0000">
+                            </div>
+                            <div class="form-group my-3">
+                                <label for="endereco">Endereço</label>
+                                <input type="text" class="form-control" id="endereco" placeholder="rua, 0 - bairro, cidade">
+                            </div>
+
                             <button onclick="salvarMotorista" type="submit" class="btn btn-primary">Enviar</button>
                         </div>
                     </div>
