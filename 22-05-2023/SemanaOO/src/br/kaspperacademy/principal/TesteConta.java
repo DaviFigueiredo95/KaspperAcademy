@@ -9,5 +9,16 @@ public class TesteConta {
         c1.titular = "Bill Gates";
         c1.numero = "95972000XP";
         c1.saldo = 100000.00;
+
+        System.out.println(c1.titular);
+        System.out.println(c1.numero);
+        System.out.println(c1.saldo);
+
+        
+        Conta c2 = new Conta("Musk", "666", 666.66);
+        System.out.println(c2.titular);
+        System.out.println(c2.numero);
+        System.out.println(c2.saldo);
+
     }
 }
