@@ -20,4 +20,20 @@ public class Conta {
         System.out.println("Número da Conta: " + this.numero);
         System.out.println("Saldo R$: " + this.saldo);
     }
+
+    // Método com retorno
+    public Double mostraSaldo() {
+        return this.saldo;
+    }
+
+    public void depositar(Double valor) {
+        this.saldo += valor;
+    }
+
+    public Double sacar(Double valor) {
+        this.saldo -= valor;
+        return this.mostraSaldo();
+    }
+
+
 }

@@ -20,6 +20,10 @@ public class TesteConta {
         //System.out.println(c2.numero);
         //System.out.println(c2.saldo);
         c2.imprimirDadosBancarios();
+        c2.depositar(1000.00);
+        System.out.println("Depois do depósito: " + c2.mostraSaldo());
+        c2.sacar(60000.00);
+        System.out.println("Depois do saque: " + c2.mostraSaldo());
 
     }
 }
