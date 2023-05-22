@@ -13,4 +13,11 @@ public class Conta {
         this.numero = numero;
         this.saldo = saldo;
     }
+
+    // Método sem retorno
+    public void imprimirDadosBancarios() {
+        System.out.println("Titular: " + this.titular);
+        System.out.println("Número da Conta: " + this.numero);
+        System.out.println("Saldo R$: " + this.saldo);
+    }
 }

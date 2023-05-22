@@ -16,9 +16,10 @@ public class TesteConta {
 
         
         Conta c2 = new Conta("Musk", "666", 666.66);
-        System.out.println(c2.titular);
-        System.out.println(c2.numero);
-        System.out.println(c2.saldo);
+        //System.out.println(c2.titular);
+        //System.out.println(c2.numero);
+        //System.out.println(c2.saldo);
+        c2.imprimirDadosBancarios();
 
     }
 }
