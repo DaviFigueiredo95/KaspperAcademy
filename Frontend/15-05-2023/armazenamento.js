@@ -32,3 +32,36 @@ console.log(produtoRecuperadoO);
 
 sessionStorage.setItem("jogo", "Mortal Kombat 12");
 console.log(sessionStorage.getItem("jogo"));
+
+// Trabalhando com Cookies
+function setCokies(nome, valor, expericao) {
+    const dataExpiracao = new Date();
+    dataExpiracao.setTime(dataExpiracao.getTime() + expiracao * 24 + 60 * 60 * 1000);
+    const dataExpiracaoS = dataExpiracao.toUTCString();
+    document.cookie = `${nome}=${encodeURIComponent(valor)}; expires=${dataExpiracaoS}; path=/`;
+}
+
+// Exemplo de uso
+setCookie("curso", "JavaScript", 30);
+
+// Tarefa: pesquisa como recuperar um cookie
+
+// Exemplo de um carrinho
+const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+// Adicionar um produto no carrinho
+const novoItem = {
+    nome: "Cadeira",
+    qtd: 1,
+    valor: 250.99
+}
+
+carrinho.push(novoItem);
+
+localStorage.setItem("carrinho", JSON.stringify(carrinho));
+// Recuperando o carrinho
+const carrinhoS = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+// Exibir o conteúdo
+carrinhoS.forEach(item => {
+    console.log(`Produto: ${item.nome} | Quantidade: ${item.qtd} | Valor: ${item.valor}`)
+});
