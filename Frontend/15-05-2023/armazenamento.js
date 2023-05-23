@@ -32,7 +32,7 @@ sessionStorage.setItem("jogo", "Mortal Kombat 12");
 console.log(sessionStorage.getItem("jogo"));
 
 // Trabalhando com Cookies
-function setCokies(nome, valor, expericao) {
+function setCookie(nome, valor, expericao) {
   const dataExpiracao = new Date();
   dataExpiracao.setTime(
     dataExpiracao.getTime() + expiracao * 24 + 60 * 60 * 1000
