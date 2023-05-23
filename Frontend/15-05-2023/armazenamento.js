@@ -32,11 +32,9 @@ sessionStorage.setItem("jogo", "Mortal Kombat 12");
 console.log(sessionStorage.getItem("jogo"));
 
 // Trabalhando com Cookies
-function setCookie(nome, valor, expericao) {
+function setCookie(nome, valor, expiracao) {
   const dataExpiracao = new Date();
-  dataExpiracao.setTime(
-    dataExpiracao.getTime() + expiracao * 24 + 60 * 60 * 1000
-  );
+  dataExpiracao.setTime(dataExpiracao.getTime() + expiracao * 24 + 60 * 60 * 1000);
   const dataExpiracaoS = dataExpiracao.toUTCString();
   document.cookie = `${nome}=${encodeURIComponent(
     valor
@@ -52,9 +50,9 @@ setCookie("curso", "JavaScript", 30);
 const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 // Adicionar um produto no carrinho
 const novoItem = {
-  nome: "Cadeira",
+  nome: "Bicicleta",
   qtd: 1,
-  valor: 250.99
+  valor: 1250.99
 };
 
 carrinho.push(novoItem);
