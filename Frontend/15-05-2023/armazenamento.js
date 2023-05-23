@@ -8,13 +8,12 @@ const cidade = localStorage.getItem("cidade");
 
 console.log(`${nome} é de ${cidade}`);
 
-
 // Salvar um objeto
 const produto = {
-    nome: "Notebook",
-    preco: 3500,
-    marca: "Positivo"
-}
+  nome: "Notebook",
+  preco: 3500,
+  marca: "Positivo",
+};
 
 localStorage.setItem("produto", JSON.stringify(produto));
 
@@ -27,7 +26,6 @@ const produtoRecuperadoO = JSON.parse(produtoRecuperadoS);
 
 console.log(produtoRecuperadoO);
 
-
 // Armazenamento com Session
 
 sessionStorage.setItem("jogo", "Mortal Kombat 12");
@@ -35,10 +33,14 @@ console.log(sessionStorage.getItem("jogo"));
 
 // Trabalhando com Cookies
 function setCokies(nome, valor, expericao) {
-    const dataExpiracao = new Date();
-    dataExpiracao.setTime(dataExpiracao.getTime() + expiracao * 24 + 60 * 60 * 1000);
-    const dataExpiracaoS = dataExpiracao.toUTCString();
-    document.cookie = `${nome}=${encodeURIComponent(valor)}; expires=${dataExpiracaoS}; path=/`;
+  const dataExpiracao = new Date();
+  dataExpiracao.setTime(
+    dataExpiracao.getTime() + expiracao * 24 + 60 * 60 * 1000
+  );
+  const dataExpiracaoS = dataExpiracao.toUTCString();
+  document.cookie = `${nome}=${encodeURIComponent(
+    valor
+  )}; expires=${dataExpiracaoS}; path=/`;
 }
 
 // Exemplo de uso
@@ -50,10 +52,10 @@ setCookie("curso", "JavaScript", 30);
 const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 // Adicionar um produto no carrinho
 const novoItem = {
-    nome: "Cadeira",
-    qtd: 1,
-    valor: 250.99
-}
+  nome: "Cadeira",
+  qtd: 1,
+  valor: 250.99
+};
 
 carrinho.push(novoItem);
 
@@ -62,6 +64,8 @@ localStorage.setItem("carrinho", JSON.stringify(carrinho));
 const carrinhoS = JSON.parse(localStorage.getItem("carrinho")) || [];
 
 // Exibir o conteúdo
-carrinhoS.forEach(item => {
-    console.log(`Produto: ${item.nome} | Quantidade: ${item.qtd} | Valor: ${item.valor}`)
+carrinhoS.forEach((item) => {
+  console.log(
+    `Produto: ${item.nome} | Quantidade: ${item.qtd} | Valor: ${item.valor}`
+  );
 });
