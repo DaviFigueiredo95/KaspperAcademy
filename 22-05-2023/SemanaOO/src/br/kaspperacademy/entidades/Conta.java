@@ -1,7 +1,7 @@
 package br.kaspperacademy.entidades;
 
 public class Conta {
-    private String titular;
+    private Cliente titular;
     private String numero;
     private double saldo;
 
@@ -12,7 +12,7 @@ public class Conta {
     // Método construtor
     public Conta(){}
 
-    public Conta(String titular, String numero, double saldo) {
+    public Conta(Cliente titular, String numero, double saldo) {
         this.titular = titular;
         this.numero = numero;
         this.saldo = saldo;
@@ -39,11 +39,11 @@ public class Conta {
         return this.mostraSaldo();
     }
 
-    public String getTitular() {
+    public Cliente getTitular() {
         return titular;
     }
 
-    public void setTitular(String titular) {
+    public void setTitular(Cliente titular) {
         this.titular = titular;
     }
 
