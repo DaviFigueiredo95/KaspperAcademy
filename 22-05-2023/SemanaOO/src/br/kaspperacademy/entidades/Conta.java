@@ -1,4 +1,4 @@
-rivatepackage br.kaspperacademy.entidades;
+package br.kaspperacademy.entidades;
 
 public class Conta {
     private String titular;
