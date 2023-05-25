@@ -1,9 +1,13 @@
-package br.kaspperacademy.entidades;
+rivatepackage br.kaspperacademy.entidades;
 
 public class Conta {
-    public String titular;
-    public String numero;
-    public Double saldo;
+    private String titular;
+    private String numero;
+    private Double saldo;
+
+    public Double getSaldo() {
+        return saldo;
+    }
 
     // Método construtor
     public Conta(){}
@@ -35,5 +39,20 @@ public class Conta {
         return this.mostraSaldo();
     }
 
+    public String getTitular() {
+        return titular;
+    }
+
+    public void setTitular(String titular) {
+        this.titular = titular;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
 
 }
