@@ -3,16 +3,16 @@ package br.kaspperacademy.entidades;
 public class Conta {
     private String titular;
     private String numero;
-    private Double saldo;
+    private double saldo;
 
-    public Double getSaldo() {
+    public double getSaldo() {
         return saldo;
     }
 
     // Método construtor
     public Conta(){}
 
-    public Conta(String titular, String numero, Double saldo) {
+    public Conta(String titular, String numero, double saldo) {
         this.titular = titular;
         this.numero = numero;
         this.saldo = saldo;
@@ -26,15 +26,15 @@ public class Conta {
     }
 
     // Método com retorno
-    public Double mostraSaldo() {
+    public double mostraSaldo() {
         return this.saldo;
     }
 
-    public void depositar(Double valor) {
+    public void depositar(double valor) {
         this.saldo += valor;
     }
 
-    public Double sacar(Double valor) {
+    public double sacar(double valor) {
         this.saldo -= valor;
         return this.mostraSaldo();
     }
