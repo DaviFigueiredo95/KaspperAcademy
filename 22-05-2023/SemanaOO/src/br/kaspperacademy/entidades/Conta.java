@@ -20,7 +20,7 @@ public class Conta {
 
     // Método sem retorno
     public void imprimirDadosBancarios() {
-        System.out.println("Titular: " + this.titular);
+        System.out.println("Titular: " + this.titular.getNome() + " | CPF: " + this.titular.getCpf());
         System.out.println("Número da Conta: " + this.numero);
         System.out.println("Saldo R$: " + this.saldo);
     }
