@@ -1,12 +1,14 @@
 package br.kaspperacademy.principal;
 
+import br.kaspperacademy.entidades.Cliente;
 import br.kaspperacademy.entidades.Conta;
 
 public class TesteConta {
     public static void main(String[] args) {
         // Instanciando um objeto
         Conta c1 = new Conta();
-        c1.setTitular("Bill Gates");
+        Cliente cli1 = new Cliente();
+        c1.setTitular(cli1);
         c1.setNumero("95972000XP");
         c1.depositar(100000.00);
 
@@ -14,8 +16,8 @@ public class TesteConta {
         System.out.println(c1.getNumero());
         System.out.println(c1.getSaldo());
 
-        
-        Conta c2 = new Conta("Musk", "666", 666.66);
+        Cliente cli2 = new Cliente();
+        Conta c2 = new Conta(cli2, "666", 666.66);
         //System.out.println(c2.titular);
         //System.out.println(c2.numero);
         //System.out.println(c2.saldo);
