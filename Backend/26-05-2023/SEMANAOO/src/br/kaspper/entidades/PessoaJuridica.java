@@ -12,4 +12,9 @@ public class PessoaJuridica extends Pessoa {
         this.cnpj = cnpj;
     }
 
+    @Override
+    public void exibeDados() {
+        System.out.println("Pessoa Juridica");
+    }
+
 }

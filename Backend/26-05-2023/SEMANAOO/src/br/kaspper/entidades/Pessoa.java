@@ -1,6 +1,6 @@
 package br.kaspper.entidades;
 
-public abstract class Pessoa {
+public abstract class Pessoa implements IPessoa {
     private String nome;
     private String endereco;
 
