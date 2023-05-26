@@ -1,9 +1,9 @@
 package br.kaspper.entidades;
 
-public class Pessoa {
+public abstract class Pessoa {
     private String nome;
     private String endereco;
-    
+
     public String getNome() {
         return nome;
     }
