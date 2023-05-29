@@ -9,7 +9,7 @@ public class ClientePremium extends Cliente {
     @Override
     public void realizarCompra(double valor) {
         super.realizarCompra(valor);
-        System.out.println("Ocliente acumulou " + (valor * 0.1) + " pontos.");
+        System.out.println("O cliente acumulou " + (int) (valor * 0.1) + " pontos.");
     }
     
 }

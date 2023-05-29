@@ -11,6 +11,6 @@ public class ClienteNormal extends Cliente {
     @Override
     public void realizarCompra(double valor) {
         super.realizarCompra(valor);
-        System.out.println("O cliente acumulou: " + (valor * 0.05) + " pontos.");
+        System.out.println("O cliente acumulou: " + (int) (valor * 0.05) + " pontos.");
     }
 }
