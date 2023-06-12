@@ -1,8 +1,8 @@
 package exercicios.entidades;
 
-public class ContaCorrente extends Conta {
+public class ContaPoupanca extends Conta {
     @Override
     public double calcularTarifa(double valor) {
-        return valor * 0.02;
+        return 0;
     }
 }
