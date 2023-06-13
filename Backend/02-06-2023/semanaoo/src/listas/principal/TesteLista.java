@@ -9,5 +9,11 @@ public class TesteLista {
         String disciplina3 = "Java";
 
         ArrayList<String> disciplinas = new ArrayList<>();
+        // Adicionar elementos no ArrayList
+        disciplinas.add(disciplina1);
+        disciplinas.add(disciplina2);
+        disciplinas.add(disciplina3);
+
+        System.out.println(disciplinas);
     }
 }
