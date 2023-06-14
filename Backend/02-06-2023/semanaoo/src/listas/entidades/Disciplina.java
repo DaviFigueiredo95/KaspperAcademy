@@ -1,6 +1,6 @@
 package listas.entidades;
 
-public class Disciplina {
+public class Disciplina implements Comparable<Disciplina> {
     private String nome;
     private int cargaHoraria;
 
@@ -26,5 +26,10 @@ public class Disciplina {
     @Override
     public String toString() {
         return "Disciplina: " + this.nome + " | CH: " + this.cargaHoraria;
+    }
+
+    @Override
+    public int compareTo(Disciplina outraDisciplina) {
+        return this.nome.compareTo(outraDisciplina.nome);
     }
 }

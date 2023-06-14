@@ -1,7 +1,6 @@
 package listas.principal;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 import listas.entidades.Disciplina;
@@ -16,5 +15,6 @@ public class TesteDisciplina {
         System.out.println(disciplinas);
 
         Collections.sort(disciplinas);
+        System.out.println(disciplinas);
     }
 }
