@@ -21,5 +21,17 @@ public class TesteLista {
         // Remover elemento
         disciplinas.remove(2);
         System.out.println(disciplinas);
+
+        // Acessando elementos
+        String disciplinaSelecionada = disciplinas.get(2);
+        System.out.println(disciplinaSelecionada);
+
+        // 1ª Forma percorrendo o array
+        for(int i = 0; i < disciplinas.size(); i++) {
+            System.out.println(disciplinas.get(i));
+        }
+
+        // 2ª Forma lambda
+        disciplinas.forEach(disciplina -> System.out.println(disciplina));
     }
 }
