@@ -1,6 +1,7 @@
 package listas.principal;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class TesteLista {
     public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class TesteLista {
         disciplinas.add(disciplina2);
         disciplinas.add(disciplina3);
         System.out.println(disciplinas);
-        disciplinas.add(0, disciplina4);
+        disciplinas.add(2, disciplina4);
         System.out.println(disciplinas);
 
         // Remover elemento
@@ -33,5 +34,9 @@ public class TesteLista {
 
         // 2ª Forma lambda
         disciplinas.forEach(disciplina -> System.out.println(disciplina));
+
+        // Ordenando um ArrayList
+        Collections.sort(disciplinas);
+        System.out.println(disciplinas);
     }
 }
