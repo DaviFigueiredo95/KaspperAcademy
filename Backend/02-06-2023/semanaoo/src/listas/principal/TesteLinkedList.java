@@ -1,6 +1,7 @@
 package listas.principal;
 
 import java.util.LinkedList;
+import listas.entidades.Pessoa;
 
 public class TesteLinkedList {
     public static void main(String[] args) {
@@ -26,5 +27,15 @@ public class TesteLinkedList {
 
         // (Ponto positivo) na inserção e remoção de elementos o LinkedList é mais eficiente que o ArrayList
         // (Ponto negativo) na recuperação do elemento
+
+
+        LinkedList<Pessoa> pessoas = new LinkedList<Pessoa>();
+        pessoas.add(new Pessoa("Paul Stanley", 60));
+        pessoas.add(new Pessoa("Ace Freeley", 55));
+        pessoas.add(new Pessoa("Eric Cars", 57));
+        pessoas.add(new Pessoa("Gene Simons", 65));
+
+        // Ordenando a lista de Pessoas
+        Collections.sort()
     }
 }
