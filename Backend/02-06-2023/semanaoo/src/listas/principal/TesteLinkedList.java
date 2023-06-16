@@ -2,6 +2,8 @@ package listas.principal;
 
 import java.util.LinkedList;
 import listas.entidades.Pessoa;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class TesteLinkedList {
     public static void main(String[] args) {
@@ -36,6 +38,22 @@ public class TesteLinkedList {
         pessoas.add(new Pessoa("Gene Simons", 65));
 
         // Ordenando a lista de Pessoas
-        Collections.sort()
+        // Collections.sort(pessoas, new Comparator<Pessoa>() {
+        //     @Override
+        //     public int compare(Pessoa pessoa1, Pessoa pessoa2) {
+        //         return pessoa1.getIdade() - pessoa2.getIdade();
+        //     }
+        // });
+
+        // Ordenar utilizando expressão lambda
+
+        
+
+        for(Pessoa pessoa : pessoas) {
+            System.out.println(pessoa);
+        }
+
+
+
     }
 }
