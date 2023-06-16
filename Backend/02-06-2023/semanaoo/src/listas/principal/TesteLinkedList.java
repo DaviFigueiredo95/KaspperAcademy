@@ -45,9 +45,10 @@ public class TesteLinkedList {
         //     }
         // });
 
-        // Ordenar utilizando expressão lambda
 
-        
+        // Ordenar utilizando expressão lambda
+        Collections.sort(pessoas, (pessoa1, pessoa2) -> pessoa2.getIdade() - pessoa1.getIdade());
+
 
         for(Pessoa pessoa : pessoas) {
             System.out.println(pessoa);
