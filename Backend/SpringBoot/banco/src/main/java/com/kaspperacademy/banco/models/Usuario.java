@@ -36,29 +36,6 @@ public class Usuario {
 	@JsonProperty(access = Access.WRITE_ONLY)
 	private List<Apontamento> apontamentos = new ArrayList<Apontamento>();
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public List<Apontamento> getApontamentos() {
-		return apontamentos;
-	}
-
-	public void setApontamentos(List<Apontamento> apontamentos) {
-		this.apontamentos = apontamentos;
-	}
 	
 	
 	

@@ -28,7 +28,11 @@ public class UsuarioController {
 	public ResponseEntity<List<Usuario>> listarUsuarios() {
 		List<Usuario> usuarios = this.usuarioService.listarUsuarios();
 		return new ResponseEntity<>(usuarios, HttpStatus.OK);
-		
+	}
+	
+	public ResponseEntity<Usuario> listarUsuario(@PathVariable Long id) {
+		Usuario usuario = this.usuarioService.listarUsuario(id);
+		return ResponseEntity.ok().body(usuario);
 	}
 	
 	@PostMapping
