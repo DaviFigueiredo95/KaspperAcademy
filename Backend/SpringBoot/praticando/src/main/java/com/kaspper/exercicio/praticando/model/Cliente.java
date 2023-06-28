@@ -11,7 +11,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -32,7 +32,7 @@ public class Cliente {
 	@Column(name = "nome", nullable = false, unique = true, length = 60)
 	private String nome;
 	
-	@OneToOne
+	@OneToMany(mappedBy = "cliente")
 	@JsonProperty(access = Access.WRITE_ONLY)
 	private List<Endereco> enderecos = new ArrayList<Endereco>();
 	
