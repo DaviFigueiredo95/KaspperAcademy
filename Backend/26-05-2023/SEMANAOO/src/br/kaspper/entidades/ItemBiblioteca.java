@@ -8,11 +8,11 @@ public class ItemBiblioteca {
         this.titulo = titulo;
     }
 
-    public String getHistoria() {
+    public String getTitulo() {
         return titulo;
     }
 
-    public void setHistoria(String titulo) {
+    public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
 

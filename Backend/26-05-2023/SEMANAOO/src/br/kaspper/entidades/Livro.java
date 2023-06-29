@@ -1,10 +1,11 @@
 package br.kaspper.entidades;
 
-public class Livro {
+public class Livro extends ItemBiblioteca {
     
     private String autor;
 
-    public Livro(String autor) {
+    public Livro(String titulo, String autor) {
+        super(titulo);
         this.autor = autor;
     }
 
@@ -16,8 +17,9 @@ public class Livro {
         this.autor = autor;
     }
 
-    public void emprestar(String titulo) {
-        System.out.println("Livro emprestado: " + titulo + " - " + autor);
+    @Override
+    public void emprestar() {
+        System.out.println("Livro emprestado: " + getTitulo() + " - Autor: " + autor);
     }
 
 }
