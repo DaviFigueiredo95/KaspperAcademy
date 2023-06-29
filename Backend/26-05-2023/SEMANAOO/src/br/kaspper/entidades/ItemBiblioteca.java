@@ -2,21 +2,21 @@ package br.kaspper.entidades;
 
 public class ItemBiblioteca {
     
-    private String historia;
+    private String titulo;
 
-    public ItemBiblioteca(String historia) {
-        this.historia = historia;
+    public ItemBiblioteca(String titulo) {
+        this.titulo = titulo;
     }
 
     public String getHistoria() {
-        return historia;
+        return titulo;
     }
 
-    public void setHistoria(String historia) {
-        this.historia = historia;
+    public void setHistoria(String titulo) {
+        this.titulo = titulo;
     }
 
     public void emprestar() {
-        System.out.println("Item emprestado: ");
+        System.out.println("Item emprestado: " + titulo);
     }
 }
