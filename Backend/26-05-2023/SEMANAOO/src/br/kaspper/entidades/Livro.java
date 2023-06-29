@@ -16,4 +16,8 @@ public class Livro {
         this.autor = autor;
     }
 
+    public void emprestar(String titulo) {
+        System.out.println("Livro emprestado: " + titulo + " - " + autor);
+    }
+
 }
