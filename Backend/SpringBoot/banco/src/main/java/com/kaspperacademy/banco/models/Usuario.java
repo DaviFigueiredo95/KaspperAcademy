@@ -4,6 +4,8 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
@@ -16,6 +18,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -46,7 +49,9 @@ public class Usuario {
 	@Email(message = "Informe um email válido!")
 	private String email;
 	
-	
+	@Column(name = "data_nascimento")
+	@DateTimeFormat(pattern = "dd/mm/yyyy")
+	@Past
 	private LocalTime dataNascimento;
 	
 	
