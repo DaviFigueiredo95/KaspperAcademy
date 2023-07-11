@@ -1,7 +1,8 @@
+"use strict";
 // o uso de var, let e const também se aplica em Typescript
-var nome = "Davi de Paula Figueiredo";
-var idade = 28;
-var tocaBaixo = false;
+let nome = "Davi de Paula Figueiredo";
+let idade = 28;
+let tocaBaixo = false;
 //let numerosDoCebolinha: number[]
-var numerosDoCebolinha = [20, 24, 26, 28];
-console.log("".concat(nome, " - ").concat(idade, " - ").concat(tocaBaixo, " - ").concat(numerosDoCebolinha.length));
+let numerosDoCebolinha = [20, 24, 26, 28];
+console.log(`${nome} - ${idade} - ${tocaBaixo} - ${numerosDoCebolinha.length}`);

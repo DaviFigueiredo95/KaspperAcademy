@@ -23,4 +23,4 @@ console.log(resultado);
 function digaOi(saudacao:string):void {
     console.log(`Olá ${saudacao}`);
 }
-digaOi("Davi");
+digaOi("Figueiredo");
