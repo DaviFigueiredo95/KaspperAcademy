@@ -6,13 +6,19 @@
 
                 <mat-form-field class="full-width-input">
                     <input matInput type="text" placeholder="Usuário" formControlName="userName" required>
+                    <mat-error>
+                        Informe o usuário
+                    </mat-error>
                 </mat-form-field>
 
                 <mat-form-field class="full-width-input">
-                    <input matInput type="text" placeholder="Senha" formControlName="password" required>
+                    <input matInput type="password" placeholder="Senha" formControlName="password" required>
+                    <mat-error>
+                        Informe a senha
+                    </mat-error>
                 </mat-form-field>
 
-                <button mat-raised-button color="primary">Primary</button>
+                <button mat-raised-button color="primary">Login</button>
 
             </form>
         </mat-card-content>
