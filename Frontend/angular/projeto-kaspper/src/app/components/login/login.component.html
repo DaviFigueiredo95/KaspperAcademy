@@ -1,1 +1,20 @@
-<p>login works!</p>
+<div class="signin-form">
+    <mat-card>
+        <mat-card-content>
+            <form [formGroup]="form" (ngSubmit)="login()">
+                <p>Informe suas credenciais</p>
+
+                <mat-form-field class="full-width-input">
+                    <input matInput type="text" placeholder="Usuário" formControlName="userName" required>
+                </mat-form-field>
+
+                <mat-form-field class="full-width-input">
+                    <input matInput type="text" placeholder="Senha" formControlName="password" required>
+                </mat-form-field>
+
+                <button mat-raised-button color="primary">Primary</button>
+
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

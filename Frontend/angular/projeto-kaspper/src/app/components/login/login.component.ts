@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
@@ -16,11 +16,18 @@ export class LoginComponent implements OnInit {
 
   form!: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  // Injeção de dependência do FormBuilder
+  constructor(private fb: FormBuilder) {}
 
-  }
   ngOnInit(): void {
-    this.form = this.fb
+    this.form = this.fb.group({
+      userName:['', Validators.required],
+      password:['', Validators.required]
+    })
+  }
+
+  login() {
+    console.log(this.form.value);
   }
 
 
