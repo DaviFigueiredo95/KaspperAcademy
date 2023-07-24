@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -17,9 +18,11 @@ export class LoginComponent implements OnInit {
   form!: FormGroup;
   private formSubmited!: boolean;
 
+  // Injeção de dependência do FormBuilder
   fb = inject(FormBuilder);
 
-  // Injeção de dependência do FormBuilder
+  // Injeção do AuthService
+  auth = inject(AuthService);
   
 
   ngOnInit(): void {
@@ -30,6 +33,7 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
+    this.auth.login(this.form.value);
     console.log(this.form.value);
   }
 
