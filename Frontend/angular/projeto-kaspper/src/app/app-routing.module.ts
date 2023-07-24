@@ -9,6 +9,11 @@ const routes: Routes = [
     loadComponent:()=>
     import('./components/login/login.component').then(x => x.LoginComponent)
   },
+  {
+    path: '',
+    loadComponent:()=>
+    import('./components/admin/home/home.component').then(x => x.HomeComponent)
+  }
 ];
 
 @NgModule({

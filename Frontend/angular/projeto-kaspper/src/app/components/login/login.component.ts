@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -17,8 +17,10 @@ export class LoginComponent implements OnInit {
   form!: FormGroup;
   private formSubmited!: boolean;
 
+  fb = inject(FormBuilder);
+
   // Injeção de dependência do FormBuilder
-  constructor(private fb: FormBuilder) {}
+  
 
   ngOnInit(): void {
     this.form = this.fb.group({
