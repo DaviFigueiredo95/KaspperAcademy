@@ -15,14 +15,18 @@ export class AuthService {
   // Usando reatividade com signal
   loggedIn = signal(false);
 
-  login(user: UserModel) {
+  get isLoggedIn() {
+    return this.loggedIn();
+  }
+
+  login(user: UserModel): void {
     // setar o usuário no localstorage
     localStorage.setItem("user", JSON.stringify(user));
     this.loggedIn.update((value) => (value = true));
     this.router.navigate(['/']);
   }
 
-  logout() {
+  logout(): void {
     localStorage.removeItem("user");
     this.router.navigate(['/login']);
   }
