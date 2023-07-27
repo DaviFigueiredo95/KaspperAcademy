@@ -21,14 +21,15 @@ export class AuthService {
 
   login(user: UserModel): void {
     // setar o usuário no localstorage
-    localStorage.setItem("user", JSON.stringify(user));
-    this.loggedIn.update((value) => (value = true));
+    localStorage.setItem('user', JSON.stringify(user));
+    this.loggedIn.update((value) => value = true);
     console.log(this.isLoggedIn)
     this.router.navigate(['/']);
   }
 
   logout(): void {
-    localStorage.removeItem("user");
+    localStorage.removeItem('user');
+    this.loggedIn.update((value) => value = false);
     this.router.navigate(['/login']);
   }
 

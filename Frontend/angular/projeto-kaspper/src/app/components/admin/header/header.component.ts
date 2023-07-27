@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -11,13 +11,17 @@ import { CommonModule } from '@angular/common';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   standalone: true,
-  imports: [CommonModule, MatToolbarModule, MatButtonModule, MatIconModule, LogoComponent]
+  imports: [CommonModule, MatToolbarModule, MatButtonModule, MatIconModule, LogoComponent],
 })
 export class HeaderComponent implements OnInit{
-  auth = Inject(AuthService);
+  auth = inject(AuthService);
 
   ngOnInit(): void {
-      console.log(`Está logado? ${this.auth.isLoggedIn}`);
+    console.log(`Está logado? ${this.auth.isLoggedIn}`);
+  }
+
+  logout(): void {
+    this.auth.logout();
   }
 
 }

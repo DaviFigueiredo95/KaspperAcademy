@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { AuthService } from 'src/app/services/auth.service';
+import { UfService } from 'src/app/services/uf.service';
 
 @Component({
   selector: 'app-login',
@@ -24,12 +25,18 @@ export class LoginComponent implements OnInit {
   // Injeção do AuthService
   auth = inject(AuthService);
   
+  // Injeção do ufService
+  ufService = inject(UfService);
 
   ngOnInit(): void {
     this.form = this.fb.group({
       userName:['', Validators.required],
       password:['', Validators.required]
-    })
+    });
+
+    this.ufService
+                  .getUfs()
+                  .subscribe((estados) => console.log(estados));
   }
 
   login() {
