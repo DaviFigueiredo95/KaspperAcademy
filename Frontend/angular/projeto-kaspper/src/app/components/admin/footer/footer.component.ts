@@ -9,7 +9,7 @@ import { LogoComponent } from "../../shared/logo/logo.component";
     template: `
             <mat-toolbar class="footer">
                 <span>
-                    
+                    Copyright - Desenvolvido em Angular 16 por <strong>Davi P. Figueiredo</strong>
                 </span>
             </mat-toolbar>
     `,
