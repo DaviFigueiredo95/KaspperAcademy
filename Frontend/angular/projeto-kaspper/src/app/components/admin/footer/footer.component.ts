@@ -6,7 +6,13 @@ import { LogoComponent } from "../../shared/logo/logo.component";
 
 @Component({
     selector: 'app-footer',
-    templateUrl: './footer.component.html',
+    template: `
+            <mat-toolbar class="footer">
+                <span>
+                    
+                </span>
+            </mat-toolbar>
+    `,
     styleUrls: ['./footer.component.scss'],
     standalone: true,
     imports: [MatToolbarModule, MatButtonModule, MatIconModule, LogoComponent]
