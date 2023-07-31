@@ -15,6 +15,12 @@ const routes: Routes = [
     loadComponent:()=>
     import('./components/admin/home/home.component').then(x => x.HomeComponent),
     canActivate:[authGuard]
+  },
+  {
+    path: 'usuarios',
+    loadComponent:() =>
+    import('./components/admin/usuario/usuario.component').then(x => x.UsuarioComponent),
+    canActivate:[authGuard]
   }
 ];
 
