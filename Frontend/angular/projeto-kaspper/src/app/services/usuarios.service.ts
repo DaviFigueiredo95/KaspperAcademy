@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
+import { Usuario } from '../models/usuario.model';
 
 @Injectable({
   providedIn: 'root',
@@ -10,6 +11,6 @@ export class UsuariosService {
   http = inject(HttpClient);
 
   getUsuarios() {
-    this.http.get(this.API_USUARIO);
+    return this.http.get<Usuario[]>(this.API_USUARIO);
   }
 }
