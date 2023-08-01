@@ -1,16 +1,20 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UsuariosService } from 'src/app/services/usuarios.service';
+import { Usuario } from 'src/app/models/usuario.model';
+import {MatTableModule} from '@angular/material/table';
 
 @Component({
   selector: 'app-usuario',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatTableModule],
   templateUrl: './usuario.component.html',
   styleUrls: ['./usuario.component.scss'],
 })
 export class UsuarioComponent implements OnInit {
   usuarioService = inject(UsuariosService);
+  usuarios: Usuario[] = [];
+  colunas: string[] = ["nome", "email"];
 
   ngOnInit(): void {
     this.carregaUsuarios();
@@ -19,6 +23,6 @@ export class UsuarioComponent implements OnInit {
   carregaUsuarios() {
     this.usuarioService
                       .getUsuarios()
-                      .subscribe(dados => console.log(dados));
+                      .subscribe((dados) => (this.usuarios = dados));
   }
 }
