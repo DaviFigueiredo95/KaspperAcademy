@@ -2,14 +2,36 @@
     <a mat-raised-button color="primary" (click)="novoUsuario()">Novo</a>
 </div>
 
-<div>
+<div class="form-container">
     <mat-card>
         <mat-card-header>
             <mat-card-title>Usuário</mat-card-title>
         </mat-card-header>
         <mat-card-content>
             <form [formGroup]="form">
+                <mat-form-field appearence="outline" class="form-element">
+                    <mat-label>Nome</mat-label>
+                    <input matInput placeholder="Informe um nome" formControlName="nome">
 
+                    <mat-error *ngIf="form.get('nome')?.hasError('required')">
+                        Informe um nome, mínimo 4 caracteres.
+                    </mat-error>
+                </mat-form-field>
+                <p></p>
+                <mat-form-field appearence="outline" class="form-element">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Informe um email" formControlName="email">
+
+                    <mat-error *ngIf="form.get('email')?.hasError('required')">
+                        Informe um email válido.
+                    </mat-error>
+                </mat-form-field>
+
+                <div class="button-container">
+                    <button mat-raised-button color="primary" [disabled]="form.invalid" (click)="save()">
+                        Salvar
+                    </button>
+                </div>
             </form>
         </mat-card-content>
     </mat-card>
